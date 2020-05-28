@@ -1,0 +1,205 @@
+@import "sass/variables";
+
+.bg-menu-movil {
+    position: absolute;
+    transition: 0.5s;
+    opacity: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+
+    &[data-open="true"] {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+
+.menu-movil {
+    position: absolute;
+    transition: 0.5s;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background-color: white;
+    z-index: 11;
+
+    &[data-open="true"] {
+        left: 0px;
+    }
+
+    &>header {
+        display: flex;
+        width: initial;
+        height: 65px;
+        border-bottom: 1px solid $light-gray;
+
+        &>.menu-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 65px;
+            height: 65px;
+
+            &>i {
+                width: 20px;
+                height: 20px;
+                background-color: $gray;
+            }
+        }
+
+        &>.logo {
+            width: 150px;
+            height: 65px;
+            background-image: url('../img/logo.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &>.body {
+        width: 100%;
+        height: calc(100% - 65px);
+
+        &>.sub-button {
+            height: 0px;
+            overflow: hidden;
+
+            &[data-active="true"] {
+                height: auto;
+            }
+        }
+
+
+        & .button {
+            padding-left: 14px;
+            line-height: 12px;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &>i {
+                transition: 0.2s;
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+                background-color: $gray;
+            }
+
+            &[data-type="sub-button"] {
+                padding-left: 40px;
+            }
+
+            &[data-active="true"] {
+                &>i {
+                    transform: rotate(90deg);
+                }
+            }
+
+            &>span {
+                color: $gray;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+
+            &:hover {
+                background-color: $light-gray;
+            }
+        }
+    }
+}
+
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-right: 20px;
+
+    &>.button {
+        color: $gray;
+        display: flex;
+        transition: 0.5s;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 5px;
+
+        &>i {
+            transition: 0.2s;
+        }
+
+        &[data-list="true"] {
+            &>span {
+                padding-right: 5px;
+            }
+        }
+
+        &>.sub-list {
+            transition: 0.5s;
+            display: none;
+            opacity: 0;
+            width: max-content;
+            min-width: 100%;
+            background-color: white;
+            border: 1px solid $light-gray;
+            position: absolute;
+            flex-direction: column;
+            border-radius: 5px;
+            right: 0px;
+            top: 40px;
+
+            &>.button {
+                color: $gray;
+                font-size: 12px;
+                transition: 0.5s;
+                padding: 7px;
+                background-color: transparent;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $light-gray;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: $light-gray;
+
+            &>.sub-list {
+                display: flex;
+                opacity: 1;
+            }
+
+            &>i {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:710px) {
+    .logo-content {
+        &>.menu-button {
+            display: flex !important;
+        }
+
+        &>.logo {
+            margin-left: 0px !important;
+        }
+    }
+
+
+
+    .menu-desktop {
+        display: none !important;
+    }
+}

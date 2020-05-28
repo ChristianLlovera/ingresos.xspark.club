@@ -1,0 +1,23 @@
+@import "sass/variables";
+
+#recaptcha-container {
+    margin-bottom: 10px;
+}
+
+.header-image[data-type='form'] {
+    background-position: 140% 18% !important;
+    background-size: 70% !important;
+}
+
+.header-custom-absolute-image {
+    width: 390px;
+    height: 270px;
+    position: absolute;
+    background-color: transparent;
+    left: -40px;
+    top: 30px;
+    background-image: url('../img/img-custom.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

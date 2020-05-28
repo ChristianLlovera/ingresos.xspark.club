@@ -1,0 +1,17 @@
+@import "sass/variables";
+
+.text-button {
+    cursor: pointer;
+    font-size: 14px;
+    width: fit-content;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.5s;
+    background-color: transparent;
+    border-radius: 5px;
+    color: $gray;
+
+    &:hover {
+        background-color: $light-gray;
+    }
+}

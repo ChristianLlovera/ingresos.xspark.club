@@ -1,0 +1,46 @@
+@import "sass/variables";
+@import "sass/mixings";
+
+.icon-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: transparent;
+
+
+    &>i {
+        width: 50%;
+        height: 50%;
+        background-color: $gray;
+        z-index: 1;
+    }
+
+    &[type='active'] {
+        &>i {
+            background-color: $orange;
+        }
+
+    }
+
+    &[data-process="true"] {
+
+        &:after {
+            content: "";
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            border: 5px solid;
+            border-color: $light-gray;
+            border-radius: 100%;
+            border-style: inset;
+            @include rotateLeft(10s)
+        }
+    }
+
+    &[type='border'] {
+        border: 1px solid $light-gray;
+    }
+
+}

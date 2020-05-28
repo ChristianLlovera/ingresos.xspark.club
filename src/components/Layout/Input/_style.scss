@@ -1,0 +1,144 @@
+@import "sass/variables";
+
+input {
+    background-color: transparent;
+
+    &::placeholder {
+        color: $gray;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select {
+    width: 100%;
+    height: auto;
+    border: 0px;
+    background-color: transparent;
+}
+
+.input {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    &>.title {
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: gray;
+    }
+
+    &>.data {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    &>textarea {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: auto;
+        resize: none;
+        overflow: hidden;
+        border: 0px;
+    }
+
+    &[data-error="true"] {
+        border-color: $orange;
+
+        &>.title {
+            color: $orange;
+        }
+    }
+
+
+}
+
+
+
+.ranking {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    padding-top: 0px;
+
+    &[type="edit"] {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    &>.rank-button {
+        position: absolute;
+        top: 17px;
+    }
+
+    &>.less-button {
+        left: -25px;
+    }
+
+    &>.plus-button {
+        right: -25px;
+    }
+
+
+    &>.title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        line-height: 12px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        color: $orange;
+    }
+
+    &>.items {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &>.bar {
+            width: 9%;
+            height: 10px;
+            background-color: $light-gray;
+
+            &:after {
+                transition: 0.5s;
+                content: "";
+                display: block;
+                width: var(--bar-decimal);
+                height: 100%;
+                background-color: $orange;
+            }
+
+        }
+
+        &>.active {
+            &:after {
+                width: 100%;
+            }
+        }
+
+        &>.decimal {
+            &:after {
+                width: var(--bar-decimal);
+            }
+        }
+    }
+
+
+
+}

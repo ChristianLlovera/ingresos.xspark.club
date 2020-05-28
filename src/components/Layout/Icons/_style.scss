@@ -1,0 +1,66 @@
+i {
+    display: block;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: gray;
+}
+
+.icon_type-menu {
+    mask: url('../icons/menu.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/menu.svg') center / contain no-repeat;
+}
+
+.icon_type-plus {
+    mask: url('../icons/plus.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/plus.svg') center / contain no-repeat;
+}
+
+.icon_type-less {
+    mask: url('../icons/less.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/less.svg') center / contain no-repeat;
+}
+
+.icon_type-edit {
+    mask: url('../icons/edit.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/edit.svg') center / contain no-repeat;
+}
+
+.icon_type-back {
+    mask: url('../icons/back.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/back.svg') center / contain no-repeat;
+}
+
+.icon_type-top {
+    mask: url('../icons/top.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/top.svg') center / contain no-repeat;
+}
+
+.icon_type-next {
+    mask: url('../icons/next.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/next.svg') center / contain no-repeat;
+}
+
+.icon_type-bottom {
+    mask: url('../icons/bottom.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/bottom.svg') center / contain no-repeat;
+}
+
+.icon_type-save {
+    mask: url('../icons/save.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/save.svg') center / contain no-repeat;
+}
+
+.icon_type-download {
+    mask: url('../icons/download.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/download.svg') center / contain no-repeat;
+}
+
+.icon_type-delete {
+    mask: url('../icons/delete.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/delete.svg') center / contain no-repeat;
+}
+
+.icon_type-exit {
+    mask: url('../icons/exit.svg') center / contain no-repeat;
+    -webkit-mask: url('../icons/exit.svg') center / contain no-repeat;
+}

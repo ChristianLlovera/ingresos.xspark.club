@@ -1,0 +1,33 @@
+@mixin circle($radio) {
+    width: $radio;
+    height: $radio;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 100%;
+    mask: url('../img/circle.svg') center / contain no-repeat;
+    -webkit-mask: url('../img/circle.svg') center / contain no-repeat;
+}
+
+@mixin rotateTo($deg) {
+    -ms-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin rotateFrom($deg) {
+    -ms-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin rotateLeft($time) {
+    -webkit-animation: rotateLeft $time linear infinite;
+    -moz-animation: rotateLeft $time linear infinite;
+    -ms-animation: rotateLeft $time linear infinite;
+    -o-animation: rotateLeft $time linear infinite;
+    animation: rotateLeft $time linear infinite;
+}
